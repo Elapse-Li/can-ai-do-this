@@ -1,0 +1,57 @@
+name: 提交一个待鉴定任务
+description: 说出你的活，评估所给它发张工牌
+title: "[任务鉴定] "
+labels: ["task-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        谢谢！请尽量具体。不要贴客户名单、密钥、未公开信息；金额和人名请先脱敏。
+
+  - type: input
+    id: task
+    attributes:
+      label: 这是什么活？
+      placeholder: 例如：把销售表整理成月报
+    validations:
+      required: true
+
+  - type: textarea
+    id: input
+    attributes:
+      label: 你一般给它什么输入？
+      placeholder: 例如：一张 Excel、上周的目标、几个零散记录
+    validations:
+      required: true
+
+  - type: textarea
+    id: output
+    attributes:
+      label: 你想要什么产出？
+      placeholder: 例如：一页纸的月报，包含渠道对比和异常说明
+    validations:
+      required: true
+
+  - type: textarea
+    id: worry
+    attributes:
+      label: 你最怕它哪里出错？
+      placeholder: 例如：编数字、把相关当因果、漏掉缺失值
+    validations:
+      required: false
+
+  - type: textarea
+    id: current
+    attributes:
+      label: 你现在是怎么做的？
+      placeholder: 例如：手动透视表，大概 40 分钟
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: 数据确认
+      options:
+        - label: 我提交的内容不含客户名单、密钥、未公开信息
+          required: true

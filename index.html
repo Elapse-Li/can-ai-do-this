@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>这活能交给 AI 吗？· AI 用工评估所</title>
+  <meta name="description" content="5 个问题，给你的工作任务发一张 AI 工牌。5 个维度、100 分，严谨打分，判决可以好笑。">
+  <meta property="og:title" content="这活能交给 AI 吗？">
+  <meta property="og:description" content="给每个工作任务发一张 AI 工牌。严谨打分，判决可以好笑。">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23f4efe4'/%3E%3Ccircle cx='32' cy='32' r='25' fill='none' stroke='%23b23b2e' stroke-width='4'/%3E%3Ctext x='32' y='40' font-size='18' font-family='sans-serif' font-weight='bold' text-anchor='middle' fill='%23b23b2e'%3E AI%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="./">AI 用工评估所 <span>EST. 2026</span></a>
+      <nav aria-label="主导航">
+        <a href="#rules">评分规则</a>
+        <a href="#jobs">已鉴定岗位</a>
+        <a id="repo-link" href="https://github.com/" target="_blank" rel="noopener">GitHub ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero wrap" id="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">NO. 001 · 任务适配度评估</p>
+        <h1>这活能<br><span class="nowrap">交给 AI 吗？</span></h1>
+        <p class="lede">5 个问题，给你的工作任务发一张 AI 工牌。判断是严谨的，判决可以好笑。</p>
+        <ul class="facts">
+          <li><strong>5</strong><span>个维度</span></li>
+          <li><strong>100</strong><span>分制</span></li>
+          <li><strong>1</strong><span>张工牌</span></li>
+        </ul>
+        <p class="fineprint">评分由公开规则算出，玩笑不参与打分。所有计算都在你的浏览器里完成，不上传任何数据。</p>
+      </div>
+
+      <div class="quiz" id="quiz" aria-live="polite">
+        <noscript><p>这个评估器需要 JavaScript。请开启后刷新页面。</p></noscript>
+      </div>
+    </section>
+
+    <section class="result-section" id="result" hidden></section>
+
+    <section class="section wrap" id="jobs">
+      <div class="section-head">
+        <p class="eyebrow">本周新员工</p>
+        <h2>已经鉴定过的活</h2>
+        <p>三张工牌，三种脾气。点开看完整报告：输入、提示词、验收清单、翻车案例。</p>
+      </div>
+      <div class="jobs">
+        <a class="job" href="scenarios/weekly-report.md" data-repo-path="scenarios/weekly-report.md">
+          <div class="job-top"><span class="tag">办公 · 高频</span><span class="verdict">试用期</span></div>
+          <h3>周报撰写</h3>
+          <p class="job-score">79<span>/100</span></p>
+          <p>能把碎片记录整理成结构，但数字和项目状态必须自己核。</p>
+          <span class="job-link">看完整报告 →</span>
+        </a>
+        <a class="job" href="scenarios/meeting-notes.md" data-repo-path="scenarios/meeting-notes.md">
+          <div class="job-top"><span class="tag">办公 · 会议</span><span class="verdict">试用期</span></div>
+          <h3>会议纪要</h3>
+          <p class="job-score">73<span>/100</span></p>
+          <p>能分清决议和讨论，但人名、负责人、截止时间要自己核。</p>
+          <span class="job-link">看完整报告 →</span>
+        </a>
+        <a class="job" href="scenarios/spreadsheet-analysis.md" data-repo-path="scenarios/spreadsheet-analysis.md">
+          <div class="job-top"><span class="tag">数据 · 分析</span><span class="verdict">试用期</span></div>
+          <h3>表格分析</h3>
+          <p class="job-score">76<span>/100</span></p>
+          <p>能算数、能解释，但口径要先定，结论要能追溯到行和列。</p>
+          <span class="job-link">看完整报告 →</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section wrap" id="rules">
+      <div class="section-head">
+        <p class="eyebrow">评分规则</p>
+        <h2>分数是算出来的，<br>不是感觉出来的</h2>
+        <p>五个维度，每题四个选项，分值公开。娱乐只发生在最后的称呼上。</p>
+      </div>
+      <div class="rules-grid">
+        <table class="rules-table">
+          <thead>
+            <tr><th>维度</th><th>分值</th><th>看什么</th></tr>
+          </thead>
+          <tbody>
+            <tr><th>重复度</th><td>20</td><td>越常做，越值得沉淀成流程</td></tr>
+            <tr><th>可验收性</th><td>25</td><td>结果能不能逐项核对</td></tr>
+            <tr><th>出错代价</th><td>20</td><td>错了多难收场</td></tr>
+            <tr><th>数据敏感度</th><td>15</td><td>能不能脱敏后再给</td></tr>
+            <tr><th>标准明确度</th><td>20</td><td>有没有模板、样例、规范</td></tr>
+          </tbody>
+        </table>
+        <div class="rules-note">
+          <h3>判决档位</h3>
+          <ul class="verdict-list">
+            <li><b>85–100</b><span>直接转正</span><em>AI 主办，你签字</em></li>
+            <li><b>65–84</b><span>试用期</span><em>AI 出活，你挑刺</em></li>
+            <li><b>45–64</b><span>实习生</span><em>只能打杂，别给 Key</em></li>
+            <li><b>25–44</b><span>外聘顾问</span><em>只准动嘴，不准动手</em></li>
+            <li><b>0–24</b><span>永不录用</span><em>这活它碰了要出事</em></li>
+          </ul>
+          <p class="rules-fine">分数衡量的是“这项任务适不适合交给 AI 独立完成”，不是“AI 能不能做”，也不是对任何人的绩效评价。</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <p>AI 用工评估所 · 只评任务，不评人 · <span id="year">2026</span></p>
+      <p><a href="CONTRIBUTING.md" data-repo-path="CONTRIBUTING.md">参与贡献</a> · <a href="LICENSE" data-repo-path="LICENSE">MIT License</a></p>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

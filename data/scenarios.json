@@ -1,0 +1,50 @@
+{
+  "name": "这活能交给 AI 吗？",
+  "version": "0.1.0",
+  "updated": "2026-11-11",
+  "rubric": {
+    "dimensions": [
+      { "id": "repeat", "name": "重复度", "max": 20 },
+      { "id": "verify", "name": "可验收性", "max": 25 },
+      { "id": "risk", "name": "出错代价", "max": 20 },
+      { "id": "privacy", "name": "数据敏感度", "max": 15 },
+      { "id": "spec", "name": "标准明确度", "max": 20 }
+    ],
+    "verdicts": [
+      { "min": 85, "label": "直接转正" },
+      { "min": 65, "label": "试用期" },
+      { "min": 45, "label": "实习生" },
+      { "min": 25, "label": "外聘顾问" },
+      { "min": 0, "label": "永不录用" }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "weekly-report",
+      "title": "周报撰写",
+      "score": 79,
+      "verdict": "试用期",
+      "summary": "能把碎片记录整理成结构，但数字和项目状态必须自己核。",
+      "scores": { "repeat": 20, "verify": 16, "risk": 14, "privacy": 9, "spec": 20 },
+      "path": "scenarios/weekly-report.md"
+    },
+    {
+      "id": "meeting-notes",
+      "title": "会议纪要",
+      "score": 73,
+      "verdict": "试用期",
+      "summary": "能分清决议和讨论，但人名、负责人、截止时间要自己核。",
+      "scores": { "repeat": 20, "verify": 16, "risk": 14, "privacy": 3, "spec": 20 },
+      "path": "scenarios/meeting-notes.md"
+    },
+    {
+      "id": "spreadsheet-analysis",
+      "title": "表格分析",
+      "score": 76,
+      "verdict": "试用期",
+      "summary": "能算数、能解释，但口径要先定，结论要能追溯到行和列。",
+      "scores": { "repeat": 15, "verify": 25, "risk": 14, "privacy": 9, "spec": 13 },
+      "path": "scenarios/spreadsheet-analysis.md"
+    }
+  ]
+}
