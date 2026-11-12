@@ -10,6 +10,7 @@
 这里不问“AI 能做什么”，只回答一个问题：**你这个任务，适不适合交给 AI 独立完成？**
 
 **在线评估器**：[https://elapse-li.github.io/can-ai-do-this/](https://elapse-li.github.io/can-ai-do-this/)  
+**场景雷达**：[https://elapse-li.github.io/can-ai-do-this/radar.html](https://elapse-li.github.io/can-ai-do-this/radar.html)  
 还没部署？见 [本地运行](#本地运行)，双击 `index.html` 就能玩。
 
 ```text
@@ -69,7 +70,20 @@
 | 会议纪要 | 73 | 试用期 | 能分清决议和讨论，但人名、负责人、时间要自己核 | [看报告](scenarios/meeting-notes.md) |
 | 表格分析 | 76 | 试用期 | 能算数、能解释，但口径要先定，结论要能追溯 | [看报告](scenarios/spreadsheet-analysis.md) |
 
-每张报告都包含：五维评分、最小输入、工作流程、可复制提示词、真实 before/after、验收清单、翻车案例、数据红线、转正条件。
+每张报告都包含：五维评分、最小输入、工作流程、可复制提示词、完整的 before/after 示例、验收清单、翻车案例、数据红线、转正条件。
+
+## 场景雷达
+
+找不到自己的活？打开 [场景雷达](https://elapse-li.github.io/can-ai-do-this/radar.html)：
+
+- 按类别看本站已鉴定的工牌；
+- 看精选的开源清单和企业用例库；
+- 实时搜 GitHub 上已经完成的项目；
+- 一键跳到小红书 / 知乎 / B站 / V2EX / Product Hunt 继续搜。
+
+GitHub 搜索结果只是线索，没有按本项目的标准验收；点“用它做张工牌”后会回到评估器，再自己判断。
+
+> 为什么不做“全网 AI 搜索”？这是一个纯静态站点，没有后端，不能登录平台爬内容。现在的做法是 GitHub API + 人工精选 + 搜索外链，零成本、可部署。要做语义搜索或全网总结，需要后端 + 搜索 API。
 
 ## 严肃模式 / 娱乐模式
 
@@ -83,7 +97,7 @@
 ## 这不是又一个 awesome 清单
 
 - 不做“500 个场景”，每周只加 1–2 个岗位，宁缺毋滥。
-- 每张卡必须有真实的 before/after；没有样例的 AI 生成卡片不收。
+- 每张卡必须有可复现的 before/after 示例；没有样例的 AI 生成卡片不收。
 - 每张卡必须写清楚“怎么验收”和“什么时候会翻车”。
 - 评分规则公开，换模型后重新验证，标注最后验证日期。
 
@@ -92,12 +106,17 @@
 ```text
 .
 ├── index.html                  # 评估器 + 工牌生成
+├── radar.html                  # 场景雷达：分类 + 精选 + GitHub 搜索
 ├── assets/
 │   ├── styles.css
-│   └── app.js                  # 题库、评分、Canvas 工牌
+│   ├── app.js                  # 题库、评分、Canvas 工牌
+│   ├── radar.css
+│   └── radar.js                # 雷达页面交互
 ├── scenarios/                  # 岗位卡：评分、提示词、验收、红线
 ├── examples/                   # 真实 before/after
-├── data/scenarios.json         # 机器可读的岗位索引
+├── data/
+│   ├── scenarios.json          # 机器可读的岗位索引
+│   └── radar.js                # 类别、精选清单、搜索入口
 ├── CONTRIBUTING.md
 └── LICENSE
 ```
@@ -134,6 +153,7 @@ python -m http.server 8000
 
 - [x] 评分器 + 工牌生成
 - [x] 3 个岗位：周报、会议纪要、表格分析
+- [x] 场景雷达：本站 + 精选清单 + GitHub 实时搜索
 - [ ] 10 个岗位：办公、教师、电商
 - [ ] 工牌分享页 / 榜单
 - [ ] 英文版

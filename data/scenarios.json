@@ -25,6 +25,8 @@
       "score": 79,
       "verdict": "试用期",
       "summary": "能把碎片记录整理成结构，但数字和项目状态必须自己核。",
+      "categories": ["office"],
+      "tags": ["周报", "汇报", "办公", "写作"],
       "scores": { "repeat": 20, "verify": 16, "risk": 14, "privacy": 9, "spec": 20 },
       "path": "scenarios/weekly-report.md"
     },
@@ -34,6 +36,8 @@
       "score": 73,
       "verdict": "试用期",
       "summary": "能分清决议和讨论，但人名、负责人、截止时间要自己核。",
+      "categories": ["office"],
+      "tags": ["会议", "纪要", "办公", "记录"],
       "scores": { "repeat": 20, "verify": 16, "risk": 14, "privacy": 3, "spec": 20 },
       "path": "scenarios/meeting-notes.md"
     },
@@ -43,6 +47,8 @@
       "score": 76,
       "verdict": "试用期",
       "summary": "能算数、能解释，但口径要先定，结论要能追溯到行和列。",
+      "categories": ["office"],
+      "tags": ["表格", "数据", "分析", "Excel"],
       "scores": { "repeat": 15, "verify": 25, "risk": 14, "privacy": 9, "spec": 13 },
       "path": "scenarios/spreadsheet-analysis.md"
     }

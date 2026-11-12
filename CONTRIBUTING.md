@@ -21,7 +21,7 @@
 复制 [`scenarios/weekly-report.md`](scenarios/weekly-report.md)，按同样结构填。一张合格的卡必须有：
 
 - [ ] 五维评分，分数能加总到总分，和选项分值对得上。
-- [ ] 至少一组真实的 before/after，放在 `examples/`。
+- [ ] 至少一组可复现的 before/after（真实案例请先脱敏），放在 `examples/`。
 - [ ] 可直接复制的提示词。
 - [ ] 至少 3 条验收清单。
 - [ ] 至少 2 个常见翻车及补救。
@@ -45,6 +45,16 @@
 - 你建议怎么改，改完后哪些已有卡片会受影响。
 
 只改文案、不改分数的 PR 随时欢迎；改分数权重的 PR 需要先讨论。
+
+## 4. 给场景雷达加一条线索
+
+编辑 [`data/radar.js`](data/radar.js)：
+
+- `sources`：加一个外部清单/项目，写清楚 `why` 和 `caveat`，不要只放链接。
+- `queryAliases`：如果某个中文任务在 GitHub 上搜不到，补一条中英映射。
+- `categories`：新增类别时，同时补 `keywords` 和 `githubQuery`。
+
+外部线索必须标注“未人工验证”，不要写成已经验收过的工牌。
 
 ## 格式约定
 

@@ -774,6 +774,11 @@
       });
     }
 
+    const taskParam = new URLSearchParams(window.location.search).get('task');
+    if (taskParam) {
+      state.task = taskParam.trim().slice(0, 24);
+    }
+
     renderQuiz();
   }
 
